@@ -13,6 +13,14 @@
 
 Following [this guide](https://github.com/fubark/cyber/blob/master/docs/build.md):
 
+### Prerequisites 
+
+We need Zig version 0.11+ installed. Check with `zig version`. 
+
+If you need to install or upgrade Zig, see [Zig installation wiki](https://github.com/ziglang/zig/wiki/Install-Zig-from-a-Package-Manager) for how to do this on your machine.
+
+### Building Cyber from source
+
 ```bash
 git clone https://github.com/fubark/cyber.git
 cd cyber/
