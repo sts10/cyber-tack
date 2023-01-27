@@ -30,10 +30,11 @@ Now test your install with `cyber --help`
 `touch hello_word.cy`
 
 ```cyber
-worlds = ['World', '世界', 'दुनिया', 'mundo']
+-- This is a comment
+-- Put this code in hello_world.cy
+worlds = ['World', 'Mundo']
 for worlds each w:
     print 'Hello, {w}!'
-
 ```
 
 `cyber hello_word.cy`
