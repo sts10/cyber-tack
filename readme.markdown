@@ -6,7 +6,7 @@
 * [Cyber 0.1 docs](https://github.com/fubark/cyber/blob/master/docs/docs.md)
 * [Some examples of Cyber code](https://github.com/fubark/cyber/tree/master/examples)
 
-### How I've implemented tic tac toe in while learning a language before
+### How I've implemented tic tac toe in while learning other languages in the past
 * [My tic-tac-toe game in Go](https://github.com/sts10/tic-tac-go/blob/main/game.go) and in [Rust](https://github.com/sts10/rusty-tac).
 
 ## Installation: Building Cyber 0.1 from source (with Zig)
