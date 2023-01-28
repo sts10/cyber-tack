@@ -7,7 +7,7 @@
 * [Some examples of Cyber code](https://github.com/fubark/cyber/tree/master/examples)
 
 ### How I've implemented tic tac toe in while learning other languages in the past
-* [My tic-tac-toe game in Go](https://github.com/sts10/tic-tac-go/blob/main/game.go) and in [Rust](https://github.com/sts10/rusty-tac).
+* My tic-tac-toe game [in Go](https://github.com/sts10/tic-tac-go/blob/main/game.go) and [in Rust](https://github.com/sts10/rusty-tac).
 
 ## Installation: Building Cyber 0.1 from source (with Zig)
 
@@ -50,3 +50,18 @@ for worlds each w:
 ## Running this program
 
 `cyber run.cy`
+
+## A very basic .cy filetype detection in Vim
+
+No syntax support yet?! Just have vim get out of the way:
+
+```vim
+autocmd BufRead,BufNewFile *.cy call SetCyberOptions()
+function SetCyberOptions()
+  set syntax=off
+  set nospell
+  set tabstop=4
+  set shiftwidth=4
+  set filetype=cyber
+endfunction
+```

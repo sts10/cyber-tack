@@ -2,7 +2,10 @@
 game_over = false
 turn_number = 1
 board = [0,0,0,0,0,0,0,0,0]
-present_board(board)
+
+while game_over != true:
+    present_board(board)
+
 
 func present_board(board):
     print '{board[0]} {board[1]} {board[2]}'
