@@ -80,4 +80,3 @@ func check_for_winner(b):
         i += 1
     -- If we got here, no one has won yet!
     return 0
-
