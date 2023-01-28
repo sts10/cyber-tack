@@ -21,7 +21,7 @@ while game_over != true:
         print "Player {winning_player} wins!!"
         game_over = true
     else turn_number == 8:
-        --  Tie game example: 0 2 1 3 4 7 5 8 6
+        -- An example of a tie game: 0 2 1 3 4 7 5 8 6
         print "Tie game!"
         game_over = true
     else: 
