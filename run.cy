@@ -15,7 +15,17 @@ while game_over != true:
         exit(1)
 
     board = execute_player_move(current_move, player, board)
-    turn_number = turn_number + 1
+
+
+    winning_player = check_for_winner(board)
+    print "checked for winner"
+    if winning_player != 0:
+        print "Player {winning_player} wins!!"
+        game_over = true
+    else turn_number == 9:
+        print "Tie game!"
+    else: 
+        turn_number = turn_number + 1
 
 
 func execute_player_move(current_move, player, board):
@@ -47,4 +57,26 @@ func display_space(raw):
         return "X"
     else raw == 10:
         return "O"
+
+func check_for_winner(b):
+    -- initalize sums
+    sums = [0,0,0,0,0,0,0,0]
+    -- calculate sums
+    sums[0] = b[2] + b[4] + b[6]
+    sums[1] = b[0] + b[3] + b[6]
+    sums[2] = b[1] + b[4] + b[7]
+    sums[3] = b[2] + b[5] + b[8]
+    sums[4] = b[0] + b[4] + b[8]
+    sums[5] = b[6] + b[7] + b[8]
+    sums[6] = b[3] + b[4] + b[5]
+    sums[7] = b[0] + b[1] + b[2]
+
+    for sums each sum:
+        print sum
+        if sum == 3:
+            return 1
+        else sum == 30:
+            return 2
+    -- if got here, no one has won yet!
+    return 0
 
