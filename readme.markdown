@@ -58,10 +58,12 @@ No syntax support yet?! Just have vim get out of the way:
 ```vim
 autocmd BufRead,BufNewFile *.cy call SetCyberOptions()
 function SetCyberOptions()
-  set syntax=off
-  set nospell
-  set tabstop=4
-  set shiftwidth=4
+  setlocal syntax=off
+  setlocal nospell
+  setlocal tabstop=4
+  setlocal shiftwidth=4
+  " If you have tpope/vim-commentary, this gives you easy commenting
+  setlocal commentstring=--\ %s
   set filetype=cyber
 endfunction
 ```
