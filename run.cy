@@ -30,6 +30,11 @@ while game_over != true:
 
 func execute_player_move(current_move, player, board):
     -- we could validate current_move better right here
+    print "current_move is {current_move}; as number is {number(current_move)}"
+    if number(current_move) < 0 || number(current_move) > 9:
+        print "Invalid move"
+        current_move = getInput().toString()
+        board = execute_player_move(current_move, player, board)
     if board[current_move] != 0:
         print "Please pick an unoccupied space!"
         current_move = getInput().toString()
