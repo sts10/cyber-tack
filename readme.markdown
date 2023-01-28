@@ -3,6 +3,8 @@
 ## Useful references 
 
 ### Cyber resources
+* [Cyber's Github repo](https://github.com/fubark/cyber) and [website](https://cyberscript.dev)
+* [Cyber's online playground](https://cyberscript.dev/play.html)
 * [Cyber 0.1 docs](https://github.com/fubark/cyber/blob/master/docs/docs.md)
 * [Some examples of Cyber code](https://github.com/fubark/cyber/tree/master/examples)
 
