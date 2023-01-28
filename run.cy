@@ -18,13 +18,14 @@ while game_over != true:
 
 
     winning_player = check_for_winner(board)
-    print "checked for winner"
+    print "CHECKED FOR WINNER"
     if winning_player != 0:
         print "Player {winning_player} wins!!"
         game_over = true
     else turn_number == 9:
         print "Tie game!"
     else: 
+        print "No winner!"
         turn_number = turn_number + 1
 
 
@@ -71,12 +72,19 @@ func check_for_winner(b):
     sums[6] = b[3] + b[4] + b[5]
     sums[7] = b[0] + b[1] + b[2]
 
-    for sums each sum:
-        print sum
-        if sum == 3:
+    -- I would use `for sums each sum:` here, but I check getting an error
+    for 0..8 each i:
+        print "i is {i}; Sum: {sums[i]}"
+        if sums[i] == 3:
+            print "Returning 1"
             return 1
-        else sum == 30:
+        else sums[i] == 30:
+            print "Returning 2"
             return 2
+        else:
+            print "hitting the continue"
+            continue
     -- if got here, no one has won yet!
+    print "Returning 0"
     return 0
 
