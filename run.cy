@@ -1,4 +1,4 @@
--- A command-line tic-tac-toe game in Cyber
+-- A command-line tic-tac-toe game for two human players, written in Cyber
 game_over = false
 turn_number = 0
 board = [0,0,0,0,0,0,0,0,0]
@@ -9,7 +9,6 @@ while game_over != true:
     print "Player {player}'s turn"
 
     current_move = getInput().toString()
-    print "Received current_move as {current_move}"
     -- User can quit with 9
     if current_move == 9:
         exit(1)
@@ -18,14 +17,14 @@ while game_over != true:
 
 
     winning_player = check_for_winner(board)
-    print "CHECKED FOR WINNER"
     if winning_player != 0:
         print "Player {winning_player} wins!!"
         game_over = true
-    else turn_number == 9:
+    else turn_number == 8:
+        --  Tie game example: 0 2 1 3 4 7 5 8 6
         print "Tie game!"
+        game_over = true
     else: 
-        print "No winner!"
         turn_number = turn_number + 1
 
 
@@ -43,13 +42,11 @@ func execute_player_move(current_move, player, board):
     return board
 
 func present_board(board):
+    -- I would for `for board each i, space:` but I can't figure out how to 
+    -- print without it inserting a newline
     print '{display_space(board[0])} {display_space(board[1])} {display_space(board[2])}'
     print '{display_space(board[3])} {display_space(board[4])} {display_space(board[5])}'
     print '{display_space(board[6])} {display_space(board[7])} {display_space(board[8])}'
-    -- can't get this loop to work cuz I can't
-    -- print on same line
-    -- for board each i, space:
-        --print '{i}. {space}'
 
 func display_space(raw):
     if raw == 0:
@@ -72,19 +69,15 @@ func check_for_winner(b):
     sums[6] = b[3] + b[4] + b[5]
     sums[7] = b[0] + b[1] + b[2]
 
-    -- I would use `for sums each sum:` here, but I check getting an error
-    for 0..8 each i:
-        print "i is {i}; Sum: {sums[i]}"
+    -- I would use `for sums each sum:` or even `for 0..8 each i:` here, 
+    -- but I kept getting relatively opaque errors...
+    i = 0 
+    while i < 8:
         if sums[i] == 3:
-            print "Returning 1"
             return 1
         else sums[i] == 30:
-            print "Returning 2"
             return 2
-        else:
-            print "hitting the continue"
-            continue
-    -- if got here, no one has won yet!
-    print "Returning 0"
+        i += 1
+    -- If we got here, no one has won yet!
     return 0
 
