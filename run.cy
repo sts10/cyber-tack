@@ -10,7 +10,8 @@ while game_over != true:
 
     current_move = getInput().toString()
     -- User can quit with 9
-    if current_move == 9:
+    if current_move == "9":
+        print "OK, quitting"
         exit(1)
 
     board = execute_player_move(current_move, player, board)
