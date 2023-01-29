@@ -13,7 +13,7 @@ I decided to try to write a tic-tac-toe game with it.
 * [Some examples of Cyber code](https://github.com/fubark/cyber/tree/master/examples)
 
 ### How I implemented this tic tac toe game while learning other languages in the past
-In the past, I wrote this same little tic-tac-toe game [in Go](https://github.com/sts10/tic-tac-go/blob/main/game.go) and [in Rust](https://github.com/sts10/rusty-tac).
+In the past, I wrote this same little tic-tac-toe game [Go](https://github.com/sts10/tic-tac-go/blob/main/game.go), [Rust](https://github.com/sts10/rusty-tac) and [Zig](https://github.com/sts10/zig-zac-zoe).
 
 ## Installation: Building Cyber 0.1 from source (with Zig)
 
