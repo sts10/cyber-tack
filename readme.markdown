@@ -1,6 +1,6 @@
 # Cyber Tac: Tic tac toe in Cyber
 
-[Cyber](https://cyberscript.dev) is a very new scripting language written in [Zig](https://ziglang.org/). It's [very new](https://github.com/fubark/cyber/commit/d21f435e64da3463441da6dde504838810ea1c38)! 
+[Cyber](https://cyberscript.dev) is a [very new](https://github.com/fubark/cyber/commit/d21f435e64da3463441da6dde504838810ea1c38) scripting language written in [Zig](https://ziglang.org/). 
 
 I decided to try to write a tic-tac-toe game with it.
 
