@@ -81,9 +81,6 @@ func validate_move(current_move):
     if current_move == 9:
         print "OK, quitting"
         exit(1)
-    else current_move < 0:
-        print "Error: Invalid move. Too low. Quitting."
-        exit(1)
-    else current_move > 9:
-        print "Error: Invalid move. Too high. Quitting."
+    else current_move < 0 or current_move > 9:
+        print "Error: Invalid move. Quitting."
         exit(1)
