@@ -28,7 +28,7 @@ func execute_player_move(current_move, player, board):
     validate_move(current_move)
     if board[current_move] != 0:
         print "Please pick an unoccupied space!"
-        current_move = getInput().toString()
+        current_move = number(getInput().toString())
         board = execute_player_move(current_move, player, board)
     else:
         if player == 1:
