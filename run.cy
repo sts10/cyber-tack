@@ -9,21 +9,8 @@ while game_over != true:
     print "Player {player}'s turn"
 
     current_move = number(getInput().toString())
-    print "Got current_move as {current_move}"
-    -- User can quit with 9
-    if current_move == 9:
-        print "OK, quitting"
-        exit(1)
-    else current_move < 0:
-        print "Error: Invalid move. Too low. Quitting."
-        exit(1)
-    else current_move > 9:
-        print "Error: Invalid move. Too high. Quitting."
-        exit(1)
 
-    print "current_move parsed as {current_move}"
     board = execute_player_move(current_move, player, board)
-
 
     winning_player = check_for_winner(board)
     if winning_player != 0:
@@ -38,7 +25,7 @@ while game_over != true:
 
 
 func execute_player_move(current_move, player, board):
-    -- we could validate current_move better right here
+    validate_move(current_move)
     if board[current_move] != 0:
         print "Please pick an unoccupied space!"
         current_move = getInput().toString()
@@ -89,3 +76,14 @@ func check_for_winner(b):
         i += 1
     -- If we got here, no one has won yet!
     return 0
+
+func validate_move(current_move):
+    if current_move == 9:
+        print "OK, quitting"
+        exit(1)
+    else current_move < 0:
+        print "Error: Invalid move. Too low. Quitting."
+        exit(1)
+    else current_move > 9:
+        print "Error: Invalid move. Too high. Quitting."
+        exit(1)
