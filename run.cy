@@ -8,12 +8,20 @@ while game_over != true:
     player = turn_number % 2 + 1
     print "Player {player}'s turn"
 
-    current_move = getInput().toString()
+    current_move = number(getInput().toString())
+    print "Got current_move as {current_move}"
     -- User can quit with 9
-    if current_move == "9":
+    if current_move == 9:
         print "OK, quitting"
         exit(1)
+    else current_move < 0:
+        print "Error: Invalid move. Too low. Quitting."
+        exit(1)
+    else current_move > 9:
+        print "Error: Invalid move. Too high. Quitting."
+        exit(1)
 
+    print "current_move parsed as {current_move}"
     board = execute_player_move(current_move, player, board)
 
 
