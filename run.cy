@@ -28,7 +28,7 @@ func execute_player_move(current_move, player, board):
     validate_move(current_move)
     if board[current_move] != 0:
         print "Please pick an unoccupied space!"
-        current_move = number(getInput().toString())
+        current_move = number(getInput().utf8())
         board = execute_player_move(current_move, player, board)
     else:
         if player == 1:
@@ -68,7 +68,7 @@ func check_for_winner(b):
     for sums each sum:
         if sum == 3:
             return 1
-        if sum == 30: -- Not sure why I can't use `else sum == 30:` here... I get an opaque error
+        else sum == 30:
             return 2
     -- If we got here, no one has won yet!
     return 0
