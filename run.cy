@@ -8,7 +8,7 @@ while game_over != true:
     player = turn_number % 2 + 1
     print "Player {player}'s turn"
 
-    current_move = number(getInput().toString())
+    current_move = number(getInput().utf8())
 
     board = execute_player_move(current_move, player, board)
 
