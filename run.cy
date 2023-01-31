@@ -65,15 +65,11 @@ func check_for_winner(b):
     sums[6] = b[3] + b[4] + b[5]
     sums[7] = b[0] + b[1] + b[2]
 
-    -- I would use `for sums each sum:` or even `for 0..8 each i:` here, 
-    -- but I kept getting relatively opaque errors...
-    i = 0 
-    while i < 8:
-        if sums[i] == 3:
+    for sums each sum:
+        if sum == 3:
             return 1
-        else sums[i] == 30:
+        if sum == 30: -- Not sure why I can't use `else sum == 30:` here... I get an opaque error
             return 2
-        i += 1
     -- If we got here, no one has won yet!
     return 0
 
