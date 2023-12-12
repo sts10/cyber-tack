@@ -1,5 +1,7 @@
 -- A command-line tic-tac-toe game for two human players, written in Cyber
 import os
+print "We're playing tic-tac-toe!"
+print "Each space is number 0 through 8."
 var game_over = false
 var turn_number = 0
 var board = [0,0,0,0,0,0,0,0,0]
@@ -7,7 +9,7 @@ var board = [0,0,0,0,0,0,0,0,0]
 while game_over != true:
     present_board(board)
     var player = turn_number % 2 + 1
-    print "Player $(player)'s turn"
+    print "Player $(player)'s turn (Enter a number 0 through 8)"
 
     var user_input = os.readLine()
     var current_move = int(user_input)
