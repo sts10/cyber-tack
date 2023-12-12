@@ -6,7 +6,9 @@ I decided to try to write a tic-tac-toe game with it.
 
 ## Running this program
 
-`cyber run.cy`
+```bash
+cyber run.cy
+```
 
 Should work with Cyber v0.3.
 
