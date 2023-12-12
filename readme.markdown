@@ -4,6 +4,12 @@
 
 I decided to try to write a tic-tac-toe game with it.
 
+## Running this program
+
+`cyber run.cy`
+
+Should work with Cyber v0.3.
+
 ## Useful references 
 
 ### Cyber resources
@@ -15,7 +21,7 @@ I decided to try to write a tic-tac-toe game with it.
 ### How I implemented this tic tac toe game while learning other languages in the past
 In the past, I wrote this same little tic-tac-toe game [Go](https://github.com/sts10/tic-tac-go/blob/main/game.go), [Rust](https://github.com/sts10/rusty-tac) and [Zig](https://github.com/sts10/zig-zac-zoe).
 
-## Installation: Building Cyber 0.1 from source (with Zig)
+## Installation: Building Cyber from source (with Zig)
 
 Following [this guide](https://github.com/fubark/cyber/blob/master/docs/build.md):
 
@@ -24,20 +30,6 @@ Following [this guide](https://github.com/fubark/cyber/blob/master/docs/build.md
 You need [Zig](https://ziglang.org/) version 0.11+ installed. Check with `zig version`. 
 
 If you need to install or upgrade Zig, see [Zig installation wiki](https://github.com/ziglang/zig/wiki/Install-Zig-from-a-Package-Manager) for how to do this on your machine.
-
-### Building Cyber from source
-
-```bash
-git clone https://github.com/fubark/cyber.git
-cd cyber/
-zig version # => Verify that you have 0.11 or higher
-zig build test # => Hopefully all tests pass! 
-zig build cli -Drelease-fast
-./zig-out/cyber/cyber help
-cp ./zig-out/cyber/cyber ~/.local/bin/
-```
-
-Now test your install with `cyber --help`
 
 ### Hello world
 
@@ -52,10 +44,6 @@ for worlds each w:
 ```
 
 `cyber hello_word.cy`
-
-## Running this program
-
-`cyber run.cy`
 
 ## A very basic .cy filetype detection in Vim
 
